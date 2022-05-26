@@ -1,0 +1,929 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mainContainer {
+  padding-top: 4.5em;
+}
+
+.total-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* -------------------- Header */
+
+.logo-imagebox {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo-imagebox img {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.nav-links li {
+  list-style: none;
+  display: block;
+  margin-right: 2em;
+  color: #2c3545;
+  width: 100%;
+}
+
+.nav-links li:hover {
+  color: #dc5a41;
+}
+
+.mui-icon-li {
+  display: block;
+}
+
+/* -------------------- IntroAndOrder */
+.IntroAndOrder_Container {
+  width: 100%;
+  height: 80vh;
+  background-image: url(/public/images/backG1.jpg);
+  background-size: cover;
+  margin: 0;
+  padding-top: 7.5em;
+}
+
+.IntroAndOrder_Container h4 {
+  font-family: 'Fredericka the Great', cursive;
+  color: darkgreen;
+  font-size: 7.5vw;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.IntroAndOrder_Container p {
+  font-size: 3vw;
+  color: #dc5a41;
+  font-weight: bold;
+}
+
+.IO_ButtonBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.IO_buttons {
+  border: none;
+  display: block;
+  background-color: #dc5a41;
+  color: white;
+  font-size: 1em;
+  width: 14em;
+  height: 4em;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 3em;
+  margin: 1em 2em;
+}
+
+.IO_buttons:hover {
+  background-color: #2c3545;
+}
+
+.IO_TextBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3em;
+}
+
+/* ----------------------- MENU */
+.Menu_Container {
+  width: 100%;
+}
+
+.logosContainer {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  border-bottom: 3px solid #2c3545;
+}
+
+.logosList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.logoListTitle {
+  display: block;
+  width: 100%;
+  font-size: 2.5vw;
+  color: #dc5a41;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.deliveryLogos {
+  max-width: 6em;
+  filter: saturate(0);
+}
+
+.deliveryLogos:hover {
+  filter: saturate(1);
+  filter: drop-shadow(2px 2px 10px #999999)
+}
+
+/* -------------------importing react tab */
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-tabs__tab-list {
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+}
+
+.react-tabs__tab {
+  display: block;
+  list-style: none;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 10em;
+  height: 3em;
+  font-size: 1em;
+  text-align: center;
+  line-height: 3em;
+  margin: .5em .5em;
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+  color: #2c3545;
+}
+
+.react-tabs__tab:hover{
+  background: #2c3545;
+  color: #fff;
+}
+
+.react-tabs__tab--selected {
+  background: #2c3545;
+  border: none;
+  color: white;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab-panel {
+  width: 100%;
+  display: none;
+  background-image: url(/public/images/menu_background_optimized.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  padding-bottom: 15vh;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.tab_Title {
+  display: block;
+  color: darkgreen;
+  width: 100%;
+  text-align: center;
+  font-size: 5vw;
+}
+
+/* ------------------------- menu cards */
+
+.menuCardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menuCardTitle1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: darkgreen;
+  font-size: 2.5vw;
+}
+
+.menuCardTitle2 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #dc5a41;
+  font-size: 2.25vw;
+  border-bottom: 1px solid #dc5a41;
+  padding-bottom: 1em;
+}
+
+.menuCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 12em;
+  border-radius: 10px;
+  background-color: rgba(255, 240, 174, 0.75);
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+  margin: 1em 1em;
+}
+
+.menuCard_name {
+  display: block;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+}
+
+.menuCard_price {
+  display: block;
+  background-color: #dc5a41;
+  color: #fff;
+  padding: .5em .75em;
+  border-radius: 10px;
+}
+
+.menuCard_price p {
+  margin: 0;
+}
+
+.menuCard_tags {
+  font-weight: normal;
+  font-size: .75em;
+  color: #dc5a41;
+  font-style: italic;
+}
+
+.menuCard_description {
+  font-family: 'Roboto', sans-serif;
+  padding-left: 1.5em;
+  padding-right: 1em;
+  font-size: .8em;
+  line-height: 1.25em;
+}
+
+.menuCardLunchContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menuCardLunchContainer h3 {
+  width: 100%;
+  text-align: center;
+  color: darkgreen;
+}
+
+.menuCardLunchContainer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: .5em .5em;
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+  border-radius: 10px;
+}
+
+.menuCardLunchContainer li {
+  display: block;
+  width: 12em;
+  text-align: left;
+  margin-bottom: .25em;
+  font-family: 'Roboto', sans-serif;
+  color: #2c3545;
+}
+
+.menuCardTitleSub {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: #2c3545;
+  font-weight: lighter;
+}
+
+.menuCard_listitems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 12em;
+  border-radius: 10px;
+  background-color: rgba(255, 240, 174, 0.75);
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+  margin: 1em 1em;
+}
+
+.menuCard_description_list {
+  font-family: 'Roboto', sans-serif;
+  padding-left: 1.5em;
+  padding-right: 1em;
+  font-size: .8em;
+  text-align: left;
+  margin: 0;
+  margin-bottom: .5em;
+}
+
+.menuCard_pricelist {
+  display: block;
+  background-color: #dc5a41;
+  color: #fff;
+  padding: .5em .75em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ---------------------------- footer */
+.Footer_Container {
+  background-color: #2c3545;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.footer_days {
+  list-style: none;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.footer_days li {
+  padding-left: 1em;
+}
+
+.footer_connect {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_connect li {
+  display: inline-block;
+}
+
+.copyrights {
+  margin-top: 2em;
+  width: 100%;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5em;
+  text-align: center;
+}
+/* -------------------- Order ---------------------- */
+.orderContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 240, 174, 0.75);
+}
+
+.order_left {
+  width: 100%;
+  margin-top: 4.25em;
+}
+
+.order_cardHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.MuiTabPanel-root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.order_card {
+  border-bottom: 1px solid #dc5a41;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.order_card_name {
+  display: block;
+  font-size: 1em;
+}
+
+.order_card_caption_1 {
+  font-size: .5em;
+  color: black;
+  font-style: italic;
+  padding-left: 1em;
+  font-weight: normal;
+}
+.order_card_caption {
+  font-size: .65em;
+  color: darkgreen;
+  padding-left: 1em;
+  font-weight: normal;
+}
+
+.order_card_caption_2 {
+  font-size: .7em;
+  color: black;
+  font-style: italic;
+  padding-left: 1em;
+  font-weight: normal;
+}
+
+.order_card_description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: .75em;
+  width: 100%;
+}
+
+.order_card_description {
+  display: block;
+  width: 80%;
+}
+
+.order_card_button {
+  border: none;
+  display: block;
+  background-color: #dc5a41;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 200;
+  font-size: .75em;
+  width: 8em;
+  height: 2.5em;
+  border-radius: 10px;
+  margin-right: 1em;
+  text-align: center;
+  line-height: 2.5em
+}
+
+.order_card_left {
+  width: 100%;
+}
+
+.order_panel_title {
+  font-size: 2em;
+  padding-top: 0;
+  margin-top: 0;
+  color: darkgreen;
+  text-align: center;
+}
+
+.order_panel_title2 {
+  font-size: 2em;
+  color: darkgreen;
+  text-align: center;
+}
+
+.order_panel_subtitle {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  border-bottom: 1px solid #dc5a41;
+  padding-bottom: 20px;
+}
+
+.thebox {
+  min-width: 100%;
+}
+
+.order_action {
+  height: 30%;
+}
+
+
+/* --------------------- Item Page --------------------- */
+
+/* --------------------- Cart -------------------------- */
+.cartContainer {
+  position: fixed;
+  background-color: darkgreen;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  bottom: 5%;
+  right: 13%;
+  line-height: 70px;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 5px 7px rgba(0, 0, 0, .75);
+}
+
+/* --------------------- Reservation ------------------- */
+.reservationContainer {
+  padding-top: 6em;
+  background-color: pink;
+}
+
+/* login */
+.form_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_button_primary {
+  border: none;
+  display: block;
+  background-color: #dc5a41;
+  color: white;
+  font-size: 1em;
+  width: 10em;
+  height: 3em;
+  border-radius: 10px;
+  margin-right: 1em;
+  text-align: center;
+  line-height: 3em;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.form_button_primary:hover {
+  background-color: #2c3545;
+  font-family: 'Raleway', sans-serif;
+}
+
+.login_title {
+  text-align: center;
+  font-size: 2em;
+  color: darkgreen;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  color: #2c3545;
+}
+
+input {
+  display: block;
+  height: 35px;
+  width: 92%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  border: 1px solid #dc5a41;
+}
+::placeholder{
+  color: #2c3545;
+}
+
+.login_forgotpassword {
+  display: block;
+  margin-top: 1em;
+  font-size: .75em;
+  text-align: center;
+  color: #dc5a41;
+}
+
+.login_forgotpassword:hover {
+  color: #2c3545;
+}
+
+.login_subtext {
+  margin-top: 1.5em;
+  display: block;
+  text-align: center;
+  font-size: .75em;
+  margin-bottom: 2em;
+}
+
+.login_register {
+  color: #dc5a41;
+}
+
+.login_register:hover {
+  color: #2c3545;
+}
+
+.Register_Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.register_form {
+  width: 25em;
+  padding: 3em 3em;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.register_title {
+  text-align: center;
+  font-size: 2em;
+  color: darkgreen;
+}
+
+.error_message {
+  display: block;
+  text-align: center;
+  color: #dc5a41;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+.success_message {
+  display: block;
+  text-align: center;
+  color: #dc5a41;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+.register_subtext {
+  margin-top: 1.5em;
+  display: block;
+  text-align: center;
+  font-size: .75em;
+  margin-bottom: 2em;
+}
+
+.forgotpassword_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.forgotpassword_form {
+  width: 25em;
+  background-color: white;
+  padding: 3em 3em;
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+}
+
+.forgotpassword_title {
+  text-align: center;
+  font-size: 2em;
+  color: darkgreen;
+}
+
+.forgotpassword_subtext {
+  margin-top: 1.5em;
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 2em;
+  line-height: 1.75em;
+}
+
+.resetpassword_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.resetpassword_form {
+  width: 25em;
+  background-color: white;
+  padding: 3em 3em;
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+}
+
+.resetPassword_title {
+  text-align: center;
+  font-size: 2em;
+  color: darkgreen;
+}
+
+.dashboard_Container {
+  height: 100vh;
+  background-color: gray;
+}
+
+.dashHeader_Container {
+  height: 30vh;
+  background-color: red;
+}
+
+/* Admin - Menu Management */
+
+.menumgmt_container {
+  width: 100%;
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.menumgmt_totalcontainer {
+  width: 90%;
+}
+
+.menumgmt_headerlist{
+  display: block;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2em;
+  margin-top: 1.5em;
+}
+
+.admin_buttons {
+  border: none;
+  display: block;
+  background-color: #dc5a41;
+  color: white;
+  font-size: 1em;
+  width: 10em;
+  height: 3em;
+  border-radius: 10px;
+  margin-right: 1em;
+  text-align: center;
+  line-height: 3em;
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+}
+
+.admin_buttons:hover {
+  background-color: #2c3545;
+}
+
+.admin_buttons_selected {
+  border: none;
+  display: block;
+  background-color: white;
+  color: #dc5a41;
+  font-size: 1em;
+  width: 10em;
+  height: 3em;
+  border-radius: 10px;
+  margin-right: 1em;
+  text-align: center;
+  line-height: 3em;
+}
+
+.Register_admin_Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+}
+
+.register_admin_form {
+  width: 25em;
+  background-color: white;
+  padding: 0.5em 3em 3em 3em;
+  box-shadow: 0 10px 20px rgba(97, 97, 97, 0.2);
+}
+
+.form_caption {
+  font-size: 0.7em;
+  color: #dc5a41;
+  font-style: italic;
+}
+
+/* admin - edit items */
+
+.view_admin_container {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin_menubox {
+  width: 85%;
+  border-radius: 10px;
+  border: 1px solid red;
+}
+
+.admin_menubox_ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.admin_menubox_name {
+  display: block;
+  font-weight: bold;
+  width: 28%;
+}
+
+/* MUi direct CSS */
+
+.MuiTabs-scrollButtons.Mui-disabled {
+  opacity: 1;
+}
+
+.MuiTabs-flexContainer.css-heg063-MuiTabs-flexContainer{
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.css-zbmdrx-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  border-radius: 5px;
+  border: 2px solid #dc5a41;
+  padding-top: 12px;
+  margin-top: 10px;
+}
+.css-zbmdrx-MuiButtonBase-root-MuiTab-root {
+  margin-top: 10px;
+}
+/* TODO: design for responsive */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container .react-datepicker-wrapper {
+  margin: 12px 0;
+  width: 100%;
+}
+
+.input-container .react-datepicker-wrapper input {
+  padding: 4px 12px;
+}
+
+.summary {
+  font-size: 18px;
+}

@@ -1,0 +1,334 @@
+[
+  {
+    "id": "94",
+    "name": "Sansai Udon",
+    "sub_name": [],
+    "description": "",
+    "Price" : 11.95,
+    "Category": "Noodles",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "95",
+    "name": "Tempura Udon",
+    "sub_name": [],
+    "description": "2pcs shrimp tempura, 4pcs vegetable tempura",
+    "Price" : 15.95,
+    "Category": "Noodles",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "96",
+    "name": "Yaki Udon",
+    "sub_name": [],
+    "description": "Pan fried udon with chicken & vegetable",
+    "Price" : 16.95,
+    "Category": "Noodles",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "97",
+    "name": "Spicy Ramen",
+    "sub_name": [],
+    "description": "spicy Korean Ramen with scallion, egg",
+    "Price" : 11.95,
+    "Category": "Noodles",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "98",
+    "name": "Miso Ramen",
+    "sub_name": [],
+    "description": "House chicken & pork bone broth with pork belly, vegetable",
+    "Price" : 14.95,
+    "Category": "Noodles",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "99",
+    "name": "Spicy Miso Ramen",
+    "sub_name": [],
+    "description": "",
+    "Price" : 14.95,
+    "Category": "Noodles",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "100",
+    "name": "Vegetable Fried Rice",
+    "sub_name": [],
+    "description": "",
+    "Price" : 11.95,
+    "Category": "Fried Rice",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "101",
+    "name": "Chicken Fried Rice",
+    "sub_name": [],
+    "description": "",
+    "Price" : 14.95,
+    "Category": "Fried Rice",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "102",
+    "name": "Beef Fried Rice",
+    "sub_name": [],
+    "description": "",
+    "Price" : 14.95,
+    "Category": "Fried Rice",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "103",
+    "name": "Shrimp Fried Rice",
+    "sub_name": [],
+    "description": "",
+    "Price" : 14.95,
+    "Category": "Fried Rice",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "104",
+    "name": "Chicken Teriyaki Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 18.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "105",
+    "name": "Salmon Teriyaki Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 19.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "106",
+    "name": "Shrimp Teriyaki Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 19.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "107",
+    "name": "Beef Teriyaki Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 22.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "108",
+    "name": "Pork Katsu Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 18.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "109",
+    "name": "Chicken Katsu Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 18.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "110",
+    "name": "Bulgogi Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 22.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "111",
+    "name": "Spicy Pork Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 22.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "112",
+    "name": "Sushi Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 19.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "113",
+    "name": "Sashimi Bento",
+    "sub_name": [],
+    "description": "",
+    "Price" : 20.95,
+    "Category": "Bento",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "114",
+    "name": "Chicken Teriyaki",
+    "sub_name": [],
+    "description": "",
+    "Price" : 16.95,
+    "Category": "Teriyaki",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "115",
+    "name": "Salmon Teriyaki",
+    "sub_name": [],
+    "description": "",
+    "Price" : 17.95,
+    "Category": "Teriyaki",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "116",
+    "name": "Shrimp Teriyaki",
+    "sub_name": [],
+    "description": "",
+    "Price" : 17.95,
+    "Category": "Teriyaki",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "117",
+    "name": "Beef Teriyaki",
+    "sub_name": [],
+    "description": "",
+    "Price" : 20.95,
+    "Category": "Teriyaki",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "118",
+    "name": "Chicken Katsu",
+    "sub_name": [],
+    "description": "",
+    "Price" : 16.95,
+    "Category": "Katsu",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "119",
+    "name": "Pork Katsu",
+    "sub_name": [],
+    "description": "",
+    "Price" : 16.95,
+    "Category": "Katsu",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "120",
+    "name": "Chirashi",
+    "sub_name": [],
+    "description": "Fresh assorted sashimi with sushi rice",
+    "Price" : 22.95,
+    "Category": "Rice Bowl",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "121",
+    "name": "Tuna Don",
+    "sub_name": [],
+    "description": "Sliced tuna sashimi with sushi rice",
+    "Price" : 22.95,
+    "Category": "Rice Bowl",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "122",
+    "name": "Salmon Don",
+    "sub_name": [],
+    "description": "Sliced salmon sashimi with sushi rice",
+    "Price" : 21.95,
+    "Category": "Rice Bowl",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "123",
+    "name": "Unagi Don",
+    "sub_name": [],
+    "description": "Broiled eel with sushi rice",
+    "Price" : 24.95,
+    "Category": "Rice Bowl",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "124",
+    "name": "Korean Chirashi",
+    "sub_name": [
+      "Hwe-Dup-Bap"
+    ],
+    "description": "Assorted vegetable & fresh sashimi, rice with Korean spicy sauce",
+    "Price" : 19.95,
+    "Category": "Rice Bowl",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "125",
+    "name": "Bulgogi Bowl",
+    "sub_name": [],
+    "description": "Stir-fried, marinated tender prime beef with vegetables, Korean style",
+    "Price" : 20.95,
+    "Category": "Rice Bowl",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "126",
+    "name": "Spicy Pork Bowl",
+    "sub_name": [],
+    "description": "Stir-fried pork & vegetable with Korean spicy sauce",
+    "Price" : 20.95,
+    "Category": "Rice Bowl",
+    "Sub_Category": "",
+    "Stock_availability": true
+  }
+]

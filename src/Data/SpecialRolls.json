@@ -1,0 +1,394 @@
+[
+  {
+    "id": "1",
+    "name": "New Jersey",
+    "sub_name": [
+      "Soy paper"
+    ],
+    "description": "Tuna, Salmon, Yellowtail, Avocado, Masago w/soy paper",
+    "Price" : 11.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "2",
+    "name": "Salmon Gone Wild",
+    "sub_name": [],
+    "description": "Salmon & avocado on california roll",
+    "Price" : 12.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "3",
+    "name": "Rainbow",
+    "sub_name": [],
+    "description": "Assorted sashimi & avocado on california roll",
+    "Price" : 12.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "4",
+    "name": "Spicy Rainbow",
+    "sub_name": [],
+    "description": "Assorted sashimi & avocado, hot sauce on spicy tuna roll",
+    "Price" : 13.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "5",
+    "name": "Candy Cane",
+    "sub_name": [
+      "Soy paper"
+    ],
+    "description": "Crab stick, asparagus, cucumber topped with tuna, salmon, avocado",
+    "Price" : 14.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "6",
+    "name": "Hama Hama",
+    "sub_name": [],
+    "description": "Yellowtail, scallion, jalapeno topped with yellowtail, avocado",
+    "Price" : 15.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "7",
+    "name": "Spicy Poki",
+    "sub_name": [],
+    "description": "Spicy tuna, avocado topped with spicy sashimi, masago, scallion",
+    "Price" : 15.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "8",
+    "name": "Salmon Lover",
+    "sub_name": [
+      "Soy paper"
+    ],
+    "description": "Salmon & avocado on spicy salmon roll",
+    "Price" : 15.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "9",
+    "name": "Sushi-Racha",
+    "sub_name": [
+      "Soy paper"
+    ],
+    "description": "Spicy tuna, asparagus topped with sliced avocado, sriracha",
+    "Price" : 13.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "10",
+    "name": "Flamingo",
+    "sub_name": [
+      "Soy paper"
+    ],
+    "description": "Salmon, avocado, special sauce on salmon avocado roll",
+    "Price" : 12.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "11",
+    "name": "Naruto",
+    "sub_name": [
+      "No rice"
+    ],
+    "description": "Cucumber wrap with tuna, salmon, yellowtail, radish, asparagus, avocado & ponzu",
+    "Price" : 15.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "12",
+    "name": "Bulls Eye",
+    "sub_name": [],
+    "description": "Seared white tuna, jalapeno, mayo, hot sauce on manhattan roll",
+    "Price" : 16.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "13",
+    "name": "Red Ocean",
+    "sub_name": [],
+    "description": "Spicy tuna, avocado topped with seared tuna, special sauce, crunch",
+    "Price" : 14.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Fresh Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "14",
+    "name": "Dragon",
+    "sub_name": [],
+    "description": "Crabstick, avocado, cucumber topped with eel, avocado",
+    "Price" : 15.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Baked Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "15",
+    "name": "Caterpillar",
+    "sub_name": [],
+    "description": "Eel, crabstick, cucumber topped with sliced avocado",
+    "Price" : 15.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Baked Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "16",
+    "name": "Baked Salmon",
+    "sub_name": [],
+    "description": "Crabstick, cream cheese, scallion, cucumber t/w salmon, special sauce",
+    "Price" : 14.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Baked Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "17",
+    "name": "Oh My God",
+    "sub_name": [
+      "Served on flaming dish"
+    ],
+    "description": "Shrimp tempura, crabstick t/w shrimp, avocado, special sauce",
+    "Price" : 16.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Baked Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "18",
+    "name": "Blazing Dragon",
+    "sub_name": [
+      "Served on flaming dish"
+    ],
+    "description": "Shrimp tempura, crabstick t/w eel, avocado, special sauce",
+    "Price" : 17.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Baked Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "19",
+    "name": "Red Bull",
+    "sub_name": [],
+    "description": "Shrimp tempura, crabstick, avocado t/w seared filet mignon, jalapeno, special sauce",
+    "Price" : 17.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Baked Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "20",
+    "name": "California Tempura",
+    "sub_name": [],
+    "description": "",
+    "Price" : 10.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "21",
+    "name": "Sweet & Hot",
+    "sub_name": [],
+    "description": "Deep fried spicy tuna roll with eel sauce, chilli sauce",
+    "Price" : 11.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "22",
+    "name": "Creamy Salmon",
+    "sub_name": [],
+    "description": "Deep fried salmon, cream cheese, avocado",
+    "Price" : 12.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "23",
+    "name": "Crunch Shrimp",
+    "sub_name": [],
+    "description": "Shrimp tempura, crabstick, cucumber with crunch, spicy mayo, chilli sauce",
+    "Price" : 10.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "24",
+    "name": "Spicy Crispy Crunch",
+    "sub_name": [],
+    "description": "Spicy tuna, avocado topped with crabstick, crunch, masago",
+    "Price" : 10.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "25",
+    "name": "Wild Shrimp",
+    "sub_name": [
+      "6pcs"
+    ],
+    "description": "Crabstick, cucumber, crunch topped with seared shrimp, crunch, scallion, furikake",
+    "Price" : 11.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "26",
+    "name": "Wild Tuna",
+    "sub_name": [
+      "6pcs"
+    ],
+    "description": "Crabstick, cucumber, crunch topped with seared tuna, crunch, scallion, furikake",
+    "Price" : 12.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "27",
+    "name": "Yellow Submarine",
+    "sub_name": [
+      "Soy Paper"
+    ],
+    "description": "Shrimp tempura, avocado in soy paper topped with spicy tuna, masago, scallion",
+    "Price" : 12.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "28",
+    "name": "Spider Roll",
+    "sub_name": [
+      "6pcs"
+    ],
+    "description": "Deep fried soft shell crab, avocado, cucumber, masago, soy paper",
+    "Price" : 13.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "29",
+    "name": "Green Light",
+    "sub_name": [
+      "Soy Paper"
+    ],
+    "description": "Salmon tempura, crabsick topped with sliced avocado, special sauce",
+    "Price" : 14.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "30",
+    "name": "Angry Shrimp",
+    "sub_name": [],
+    "description": "Shrimp tempura, crabstick, cucumber topped with spicy tuna, crunch, scallion, furikake",
+    "Price" : 14.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "31",
+    "name": "Rock Star Shrimp",
+    "sub_name": [],
+    "description": "Spicy tuna topped with seared shrimp, crunch, scallion, furikake",
+    "Price" : 14.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "32",
+    "name": "Vegas",
+    "sub_name": [
+      "6pcs"
+    ],
+    "description": "Deep fried roll with 3 kinds of fish, cream cheese, masago, avocado",
+    "Price" : 12.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "33",
+    "name": "French Kiss",
+    "sub_name": [],
+    "description": "Shrimp tempura, crabstick, cucumber topped with salmon, lemon, avocado",
+    "Price" : 15.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "34",
+    "name": "Snow Mountain",
+    "sub_name": [
+      "Tuna or Salmon"
+    ],
+    "description": "Shrimp tempura, crabstick, cucumber topped with seared tuna or salmon, crab salad, scallion, masago, crunch, special sauce",
+    "Price" : 17.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "35",
+    "name": "Volcano",
+    "sub_name": [
+      "Tuna or Salmon"
+    ],
+    "description": "Shrimp tempura, crabstick, cucumber topped with seared tuna or salmon, spicy crab salad, scallion, masago, crunch, special sauce",
+    "Price" : 17.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  },
+  {
+    "id": "36",
+    "name": "Yum Yum",
+    "sub_name": [],
+    "description": "Deep fried soft shell crab, cucumber topped with spicy tuna, sliced avocado, scallion, masago, special sauce",
+    "Price" : 18.95,
+    "Category": "Special Rolls",
+    "Sub_Category": "Tempura Rolls",
+    "Stock_availability": true
+  }
+]

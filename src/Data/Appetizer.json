@@ -1,0 +1,162 @@
+[
+  {
+    "id": "68",
+    "name": "Sashimi Appetizer",
+    "sub_name": [],
+    "description": "",
+    "Price" : 14.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Cold",
+    "Stock_availability": true
+  },
+  {
+    "id": "69",
+    "name": "Poki Tuna Sampler",
+    "sub_name": [
+      "Spicy or Sweet"
+    ],
+    "description": "",
+    "Price" : 12.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Cold",
+    "Stock_availability": true
+  },
+  {
+    "id": "70",
+    "name": "Crunch Avocado Bomb",
+    "sub_name": [
+      "Spicy"
+    ],
+    "description": "",
+    "Price" : 12.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Cold",
+    "Stock_availability": true
+  },
+  {
+    "id": "71",
+    "name": "Tuna Tartar",
+    "sub_name": [],
+    "description": "Chopped tuna, mango, avocado with special sauce, scallion & tobiko",
+    "Price" : 15.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Cold",
+    "Stock_availability": true
+  },
+  {
+    "id": "71d",
+    "name": "Tuna Tataki",
+    "sub_name": [],
+    "description": "Thinly sliced seared tuna with masago, scallion & ponzu",
+    "Price" : 15.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Cold",
+    "Stock_availability": true
+  },
+  {
+    "id": "72",
+    "name": "Ponzu Yellowtail Jalapeno",
+    "sub_name": [],
+    "description": "Sliced yellowtail sashimi with ponzu, jalapeno, scallion, masago, seaweed",
+    "Price" : 15.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Cold",
+    "Stock_availability": true
+  },
+  {
+    "id": "73",
+    "name": "Edamame",
+    "sub_name": [],
+    "description": "",
+    "Price" : 5.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "74",
+    "name": "Butter Garlic Edamame",
+    "sub_name": [],
+    "description": "",
+    "Price" : 6.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "75",
+    "name": "Gyoza",
+    "sub_name": [
+      "Pork or Vegetable"
+    ],
+    "description": "",
+    "Price" : 6.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "76",
+    "name": "Shrimp Tempura Appetizer",
+    "sub_name": [
+      "3pcs"
+    ],
+    "description": "",
+    "Price" : 7.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "77",
+    "name": "Mix Tempura",
+    "sub_name": [],
+    "description": "Shrimp, 4pcs vegetable",
+    "Price" : 7.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "78",
+    "name": "Jalapeno Bomb",
+    "sub_name": [],
+    "description": "Deep fried jalapeno with spicy tuna, cream cheese, special sauce",
+    "Price" : 12.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "79",
+    "name": "Shrimp Shumai",
+    "sub_name": [],
+    "description": "",
+    "Price" : 6.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "80",
+    "name": "Soft Shell Crab Appetizer",
+    "sub_name": [],
+    "description": "Deep fried soft shell crab with bread crumbs, masago, scallion, special sauce",
+    "Price" : 11.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  },
+  {
+    "id": "81",
+    "name": "Spring Roll",
+    "sub_name": [
+      "Harumaki"
+    ],
+    "description": "",
+    "Price" : 5.95,
+    "Category": "Appetizer",
+    "Sub_Category": "Hot",
+    "Stock_availability": true
+  }
+]

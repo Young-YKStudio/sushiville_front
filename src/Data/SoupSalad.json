@@ -1,0 +1,128 @@
+[
+  {
+    "id": "82",
+    "name": "Miso Soup",
+    "sub_name": [],
+    "description": "",
+    "Price" : 1.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "83",
+    "name": "Dumpling Soup",
+    "sub_name": [],
+    "description": "",
+    "Price" : 4.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "84",
+    "name": "spicy Seafood Miso Soup",
+    "sub_name": [],
+    "description": "",
+    "Price" : 6.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "85",
+    "name": "Udon Soup",
+    "sub_name": [
+      "Mini Udon"
+    ],
+    "description": "",
+    "Price" : 7.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "86",
+    "name": "Mushroom Miso Soup",
+    "sub_name": [],
+    "description": "",
+    "Price" : 3.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "87",
+    "name": "Oshinko Salad",
+    "sub_name": [],
+    "description": "Japanese pickled cucumber, radish, burdock, rakkyo(leek)",
+    "Price" : 4.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "88",
+    "name": "House Salad",
+    "sub_name": [],
+    "description": "",
+    "Price" : 5.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "89",
+    "name": "Avocado Salad",
+    "sub_name": [],
+    "description": "Sliced avocado on house salad",
+    "Price" : 7.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "90",
+    "name": "Seaweed Salad",
+    "sub_name": [],
+    "description": "",
+    "Price" : 5.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "91",
+    "name": "Spicy Kani Salad",
+    "sub_name": [],
+    "description": "Crabsticks, cucumber, seaweed salad with crunch, furikake, masago, scallion",
+    "Price" : 8.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "92",
+    "name": "Spicy Poki Salad",
+    "sub_name": [
+      "Large"
+    ],
+    "description": "Spicytuna, salmon, red snapper, cucumber, scallion, masago on salad",
+    "Price" : 14.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  },
+  {
+    "id": "93",
+    "name": "Spicy Sashimi Salad",
+    "sub_name": [
+      "Large"
+    ],
+    "description": "Assorted sashimi, crabsticks, seaweed salad, masago, radish, salad with Korean spicy sauce",
+    "Price" : 14.95,
+    "Category": "Soup & Salad",
+    "Sub_Category": "",
+    "Stock_availability": true
+  }
+]

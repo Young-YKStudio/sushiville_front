@@ -1,0 +1,106 @@
+[
+  {
+    "id": "174",
+    "name": "Platter #1",
+    "sub_name": [],
+    "description": [
+      "Chef's Choice of 15 Sushi",
+      "California Roll",
+      "New Jersey Roll"
+    ],
+    "Price" : 50,
+    "Category": "Party Platter",
+    "Sub_Category": "Sushi & Roll Platter",
+    "Stock_availability": true
+  },
+  {
+    "id": "175",
+    "name": "Platter #2",
+    "sub_name": [],
+    "description": [
+      "Chef's Choice of 20 Sushi",
+      "California Roll",
+      "Spicy Tuna Roll",
+      "New Jersey Roll",
+      "Salmon Gone Wild Roll"
+    ],
+    "Price" : 80,
+    "Category": "Party Platter",
+    "Sub_Category": "Sushi & Roll Platter",
+    "Stock_availability": true
+  },
+  {
+    "id": "176",
+    "name": "Platter #3",
+    "sub_name": [],
+    "description": [
+      "Chef's Choice of 30 Sushi",
+      "Tuna Roll",
+      "Salmon Roll",
+      "California Roll",
+      "New Jersey Roll",
+      "Spicy Rainbow Roll"
+    ],
+    "Price" : 100,
+    "Category": "Party Platter",
+    "Sub_Category": "Sushi & Roll Platter",
+    "Stock_availability": true
+  },
+  {
+    "id": "177",
+    "name": "Platter A",
+    "sub_name": [],
+    "description": [
+      "California Roll",
+      "Spicy Tuna Roll",
+      "Shrimp Tempura Roll",
+      "Alaska Roll",
+      "Salmon Gone Wild Roll",
+      "Spicy Rainbow Roll"
+    ],
+    "Price" : 50,
+    "Category": "Party Platter",
+    "Sub_Category": "Roll Platter",
+    "Stock_availability": true
+  },
+  {
+    "id": "178",
+    "name": "Platter B",
+    "sub_name": [],
+    "description": [
+      "California Roll",
+      "Spicy Tuna Roll",
+      "Shrimp Tempura Roll",
+      "New Jersey Roll",
+      "Rainbow Roll",
+      "Baked Salmon Roll",
+      "Angry Shrimp Roll"
+    ],
+    "Price" : 80,
+    "Category": "Party Platter",
+    "Sub_Category": "Roll Platter",
+    "Stock_availability": true
+  },
+  {
+    "id": "179",
+    "name": "Platter C",
+    "sub_name": [],
+    "description": [
+      "California Roll",
+      "Alaska Roll",
+      "Spicy Tuna Roll",
+      "Sunshine Roll",
+      "Spicy Salmon Roll",
+      "Shrimp Tempura Roll",
+      "Caterpillar Roll",
+      "Salmon Gone Wild Roll",
+      "Rock Star Shrimp Roll",
+      "New Jersey Roll",
+      "Flamingo Roll"
+    ],
+    "Price" : 100,
+    "Category": "Party Platter",
+    "Sub_Category": "Roll Platter",
+    "Stock_availability": true
+  }
+]
