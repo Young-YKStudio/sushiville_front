@@ -14,7 +14,7 @@ import { Grid, Typography, Card, CircularProgress } from '@mui/material';
 const PaymentSetting = (props) => {
 
   const [ orderData, setOrderData ] = useState();
-  const [ stripePromise, setStripePromise ] = useState(() => loadStripe('pk_live_51KlJjkKrjDamwGGy9AWU7HoOFRwI3Sj9eXtysjpEuLDhsPEoWMdgtdZ5SdjMt1haq27H8G7vQ1JwHve4SWmYhpm400gBViFosg'))
+  const [ stripePromise, setStripePromise ] = useState(() => loadStripe('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'))
 
   // handlers
 
