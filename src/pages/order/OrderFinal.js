@@ -16,7 +16,7 @@ const OrderFinal = (props) => {
   const [ orderData, setOrderData ] = useState();
   const [ comments, setComments ] = useState('');
   const [ loading, setLoading ] = useState(false);
-  const [ payAtRestaurant, setPayAtRestaurant ] = useState(false);
+  const [ payAtRestaurant, setPayAtRestaurant ] = useState(true);
   const [ isUpdated, setIsUpdated ] = useState(false);
   const [ optionOpen, setOptionOpen ] = useState(false);
   const [ modalOpen, setModalOpen ] = useState(false);
@@ -29,7 +29,9 @@ const OrderFinal = (props) => {
   }
 
   const payAtHandler = (e) => {
-    setPayAtRestaurant(!payAtRestaurant)
+    // setPayAtRestaurant(!payAtRestaurant)
+    // TODO: set to above when payment is solved
+    setPayAtRestaurant(true);
   }
 
   const optionOpenHandler = (e) => {
@@ -400,7 +402,8 @@ const OrderFinal = (props) => {
                       <Grid item xs={12} sx={{ marginTop: '1em'}}>
                         <Typography sx={{ marginBottom: '.5em', color: 'gray', fontWeight: 'bold'}}>Pay at Pick up?</Typography>
                       </Grid>
-                      { payAtRestaurant ? <>
+                      <Grid item xs={12}><Typography sx={{ color: "#dc5a41"}}>Online payment is currently not available</Typography></Grid>
+                      {/* { payAtRestaurant ? <>
                         <Grid item xs={4}>
                           <Typography sx={{ lineHeight: '2.25em', textAlign: 'right', color: 'gray'}}>Online</Typography>
                         </Grid>
@@ -420,7 +423,7 @@ const OrderFinal = (props) => {
                         <Grid item xs={4}>
                           <Typography sx={{ lineHeight: '2.25em', color: 'gray' }}>Pick up</Typography>
                         </Grid>
-                      </>}
+                      </>} */}
                     </Grid>
                     <Grid item xs={12} sx={{ marginTop: '1em', padding: '0 2em', marginBottom: '1em'}}>
                       <Typography variant='body1' sx={{ textAlign: 'center'}}>Please update options before placing.</Typography>

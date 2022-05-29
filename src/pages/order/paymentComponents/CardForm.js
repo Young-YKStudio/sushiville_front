@@ -98,15 +98,16 @@ const Cardform = (props) => {
           return
         }
         
-      const { error } = await stripe.confirmCardPayment(clientSecret, {
+      const confirmCardPayment = await stripe.confirmCardPayment(clientSecret, {
           payment_method: paymentMethodReq.paymentMethod.id
         })
-        
-      if (error) {
-        setCheckoutError(error.message)
-        setPaymentProcessing(false)
-        return
-      }
+      
+      await console.log(confirmCardPayment)
+      // if (error) {
+      //   setCheckoutError(error.message)
+      //   setPaymentProcessing(false)
+      //   return
+      // }
 
       props.handleComplete();
       props.handleNext();
@@ -156,7 +157,7 @@ const Cardform = (props) => {
                 <Typography sx={{ color: 'red', textAlign: 'center', marginBottom: '1em'}}>There is error</Typography>
               </Grid> 
               : null}
-              <Grid item xs={12}>
+              <Grid item xs={12}> 
                 <LoadingButton disabled={paymentProcessing || !stripe} loading={paymentProcessing} variant="contained" type='submit' sx={{ width: '100%'}}>Pay ${(props.total).toFixed(2)}</LoadingButton>
               </Grid>
             </Grid>
