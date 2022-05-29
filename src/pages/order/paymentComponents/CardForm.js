@@ -67,6 +67,7 @@ const Cardform = (props) => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    setPaymentProcessing(true);
 
     const billingDetails = {
       name: cardName,
