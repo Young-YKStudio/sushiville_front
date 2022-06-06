@@ -60,7 +60,9 @@ const OrderResult = (props) => {
   useEffect(() => {
     if (orderData) {
       // TODO: update server url
-      const socket = io('https://sushiville-socket.herokuapp.com/')
+      const socket = io('https://sushiville-socket.herokuapp.com/', {
+        withCredentials: true,
+      })
 
       try {
         socket.emit('newOrder', orderData[0])
