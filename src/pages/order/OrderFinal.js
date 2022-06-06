@@ -16,7 +16,7 @@ const OrderFinal = (props) => {
   const [ orderData, setOrderData ] = useState();
   const [ comments, setComments ] = useState('');
   const [ loading, setLoading ] = useState(false);
-  const [ payAtRestaurant, setPayAtRestaurant ] = useState(false);
+  const [ payAtRestaurant, setPayAtRestaurant ] = useState(true);
   const [ isUpdated, setIsUpdated ] = useState(false);
   const [ optionOpen, setOptionOpen ] = useState(false);
   const [ modalOpen, setModalOpen ] = useState(false);
@@ -341,7 +341,7 @@ const OrderFinal = (props) => {
                     <Grid item xs={12}>
                       <Card xs={{ padding: '1em 1em', borderBottom: '1px solid lightgray'}} elevation={0}>
                         <Grid container>
-                          { orderData[0].isPaidAtRestaurant === true ?
+                          {/* { orderData[0].isPaidAtRestaurant === true ?
                             <>
                               <Grid item xs={12}>
                                 <Typography sx={{ paddingLeft: '2em', fontStyle: 'italic', color: 'gray'}}>
@@ -349,7 +349,7 @@ const OrderFinal = (props) => {
                                 </Typography>
                               </Grid>
                             </> : null
-                          }
+                          } */}
                           { orderData[0].comments ? 
                             <>
                               <Grid item xs={6}>
