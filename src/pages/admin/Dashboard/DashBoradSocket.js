@@ -15,6 +15,8 @@ const DashBoardSocket = (props) => {
 
   const socket = io('http://sushiville-socket.herokuapp.com/', {
     withCredentials: true,
+    transports: ['websocket'],
+    secure: true,
   });
   // const socket = io('http://localhost:4000/');
 
