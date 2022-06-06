@@ -14,7 +14,9 @@ import { Grid, Typography, Card, CircularProgress } from '@mui/material';
 const PaymentSetting = (props) => {
 
   const [ orderData, setOrderData ] = useState();
-  const [ stripePromise, setStripePromise ] = useState(() => loadStripe(`${process.env.STRIPE_KEY}`))
+  // const [ stripePromise, setStripePromise ] = useState(() => loadStripe(`${process.env.STRIPE_KEY}`))
+  const apiKey = `${process.env.REACT_APP_STRIPE_PUB_KEY}`
+  const stripePromise = loadStripe(apiKey)
 
   // handlers
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { Grid, Typography, Card } from '@mui/material';
@@ -20,7 +20,8 @@ const Cardform = (props) => {
   const [ cardName, setCardName ] = useState('');
   const [ postal, setPostal ] = useState('');
   const [ checkoutError, setCheckoutError ] = useState('');
-
+  const [ messages, addMessage ] = useState('');
+  const [ error, setError ] = useState(false);
 
   // stripe
   const stripe = useStripe();
@@ -65,57 +66,54 @@ const Cardform = (props) => {
     setCountry(value)
   }
 
-  const handleFormSubmit = async (e) => {
+  const testtestHandleForm = async (e) => {
     e.preventDefault();
-    setPaymentProcessing(true);
-
-    const billingDetails = {
+    let testCard = elements.getElement('card')
+    let billingDetails = {
       name: cardName,
       address: {
         city: city,
         line1: line1,
         state: state,
-        postal_code: postal
+        postal_code: postal,
       }
     }
 
-    try {
-      const { data: clientSecret } = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/creditcard/charge`, {
-        totalAmount: Number(props.total.toFixed(2)),
-        orderNumber: props.orderNumber
-      })
+    if (!stripe || !elements) {
+      return;
+    }
+    const result = await stripe.createPaymentMethod({
+      type: 'card',
+      card: testCard,
+      billing_details: billingDetails,
+    })
 
-      const paymentMethodReq = await stripe.createPaymentMethod({
-        type: 'card',
-        card: elements.getElement('card'),
-        billing_details: billingDetails
-      })
+    const paymentMethod = async (result) => {
+      if(result.error) {
+        console.log(error)
+      } else {
+        try {
+          const paymentMethodReq = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/creditcard/charge`, {
+            payment_method_id: result.paymentMethod.id,
+            currency: 'usd',
+            totalAmount: Number(props.total.toFixed(2)),
+            orderNumber: props.orderNumber,
+            billing: billingDetails,
+          })
 
-      
-      if (paymentMethodReq.error) {
-          setCheckoutError(paymentMethodReq.error.message);
-          setPaymentProcessing(false)
-          return
+          if (paymentMethodReq.statusText === "OK") {
+            props.handleComplete();
+            props.handleNext();
+          } else {
+            addMessage('Please check the card')
+          }
+        } catch(error) {
+          console.log(error)
         }
-        
-      const confirmCardPayment = await stripe.confirmCardPayment(clientSecret, {
-          payment_method: paymentMethodReq.paymentMethod.id
-        })
-      
-      await console.log(confirmCardPayment)
-      // if (error) {
-      //   setCheckoutError(error.message)
-      //   setPaymentProcessing(false)
-      //   return
-      // }
-
-      props.handleComplete();
-      props.handleNext();
-
-    } catch (err) {
-      setCheckoutError(err.message)
+      }
     }
 
+    paymentMethod(result);
   }
 
   const cardElementOpts = {
@@ -127,9 +125,10 @@ const Cardform = (props) => {
     <ThemeProvider theme={theme}>
       <Grid item xs={12}>
         <Card sx={{ padding: '1em 1em'}}>
-          <form onSubmit={handleFormSubmit}>
+          <form onSubmit={testtestHandleForm}>
             <Grid container>
               <Grid item xs={12}>
+                <Typography sx={{ textAlign: 'center', color: '#dc5a41', fontSize: '1.15em'}}>{messages}</Typography>
                 <CardInformation 
                   line1={line1}
                   city={city}
@@ -149,6 +148,7 @@ const Cardform = (props) => {
                 <CardElementContainer>
                   <CardElement 
                     options={cardElementOpts}
+                    id='card-element'
                   />
                 </CardElementContainer>
               </Grid>
