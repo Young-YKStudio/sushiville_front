@@ -62,6 +62,8 @@ const OrderResult = (props) => {
       // TODO: update server url
       const socket = io('https://sushiville-socket.herokuapp.com/', {
         withCredentials: true,
+        transports: ['websocket'],
+        secure: true,
       })
 
       try {
