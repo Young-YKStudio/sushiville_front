@@ -28,11 +28,7 @@ const OrderStatus = (props) => {
   const [ modalResValue, setModalResValue ] = useState('');
   const [ modalResOpen, setModalResOpen ] = useState(false);
 
-  const socket = io('https://sushiville-socket.herokuapp.com/', {
-    withCredentials: true,
-    transports: ['websocket'],
-    secure: true,
-  })
+  const socket = io('https://sushiville-socket.herokuapp.com/')
   // const socket = io('http://localhost:4000/')
   const audio = new Audio('/sound/ding.mp3')
   let interval
