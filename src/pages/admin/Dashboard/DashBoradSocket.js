@@ -13,7 +13,9 @@ const DashBoardSocket = (props) => {
   const [ socketOrders, setSocketOrders ] = useState(null);
   const [ socketReservations, setSocketReservations ] = useState(null);
 
-  const socket = io('http://sushiville-socket.herokuapp.com/');
+  const socket = io('http://sushiville-socket.herokuapp.com/', {
+    withCredentials: true,
+  });
   // const socket = io('http://localhost:4000/');
 
 
