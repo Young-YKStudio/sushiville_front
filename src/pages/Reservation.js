@@ -12,7 +12,7 @@ import theme from '../theme/theme';
 
 import { io } from 'socket.io-client';
 // TODO: update serverURL
-const socket = io('https://sushiville-socket.herokuapp.com/')
+const socket = io('http://sushiville-socket.herokuapp.com/', {withCredentials: true})
 
 const Reservation = (props) => {
   
