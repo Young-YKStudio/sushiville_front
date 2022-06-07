@@ -27,6 +27,7 @@ const OrderStatus = (props) => {
   const [ modalOpen, setModalOpen ] = useState(false);
   const [ modalResValue, setModalResValue ] = useState('');
   const [ modalResOpen, setModalResOpen ] = useState(false);
+  const [ makeButtonLoading, setMakeButtonLoading ] = useState(false);
 
   const socket = io('http://sushiville-socket.herokuapp.com/', {withCredentials: true})
   // const socket = io('http://localhost:4000/')
@@ -124,6 +125,13 @@ const OrderStatus = (props) => {
 
   // handlers
 
+  const buttonLoading = () => {
+    setMakeButtonLoading(true);
+    setTimeout(() => {
+      setMakeButtonLoading(false);
+    }, 1500)
+  }
+
   const musicPlay = () => {
     if (!!socketNewOrders.length >= 1) {
       interval = setInterval(() => {
@@ -175,6 +183,7 @@ const OrderStatus = (props) => {
         console.log(err)
       }
     }
+    buttonLoading();
     connectingSocket();
   }
   
@@ -186,6 +195,7 @@ const OrderStatus = (props) => {
         console.log(err)
       }
     }
+    buttonLoading();
     connectingSocket();
   }
   
@@ -197,6 +207,7 @@ const OrderStatus = (props) => {
         console.log(err)
       }
     }
+    buttonLoading();
     connectingSocket();
   }
 
@@ -208,6 +219,7 @@ const OrderStatus = (props) => {
         console.log(err)
       }
     }
+    buttonLoading();
     connectingSocket();
   }
 
@@ -219,6 +231,8 @@ const OrderStatus = (props) => {
         console.log(err)
       }
     }
+
+    buttonLoading();
     connectingSocket();
   }
 
@@ -230,6 +244,7 @@ const OrderStatus = (props) => {
         console.log(err)
       }
     }
+    buttonLoading();
     connectingSocket();
   }
 
@@ -307,8 +322,8 @@ const OrderStatus = (props) => {
                           </Grid>
                         </Grid>
                         <Grid item xs={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                          <LoadingButton variant='outlined' value={order._id} onClick={detailButtonHandler} sx={{ marginBottom: '.5em'}}> Detail</LoadingButton>
-                          <LoadingButton variant='contained' value={order._id} onClick={confirmOrderHandler}>Confirm</LoadingButton>
+                          <LoadingButton loading={makeButtonLoading} variant='outlined' value={order._id} onClick={detailButtonHandler} sx={{ marginBottom: '.5em'}}> Detail</LoadingButton>
+                          <LoadingButton loading={makeButtonLoading} variant='contained' value={order._id} onClick={confirmOrderHandler}>Confirm</LoadingButton>
                         </Grid>
                       </Grid>
                     </Card>
@@ -368,8 +383,8 @@ const OrderStatus = (props) => {
                           </Grid>
                         </Grid>
                         <Grid item xs={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                          <LoadingButton variant='outlined' value={order._id} onClick={detailButtonHandler} sx={{ marginBottom: '.5em'}}> Detail</LoadingButton>
-                          <LoadingButton variant='contained' value={order._id} onClick={readyOrderHandler}>ready</LoadingButton>
+                          <LoadingButton loading={makeButtonLoading} variant='outlined' value={order._id} onClick={detailButtonHandler} sx={{ marginBottom: '.5em'}}> Detail</LoadingButton>
+                          <LoadingButton loading={makeButtonLoading} variant='contained' value={order._id} onClick={readyOrderHandler}>ready</LoadingButton>
                         </Grid>
                       </Grid>
                     </Card>
@@ -429,8 +444,8 @@ const OrderStatus = (props) => {
                           </Grid>
                         </Grid>
                         <Grid item xs={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                          <LoadingButton variant='outlined' value={order._id} onClick={detailButtonHandler} sx={{ marginBottom: '.5em'}}> Detail</LoadingButton>
-                          <LoadingButton variant='contained' value={order._id} onClick={finishOrderHandler}>Picked Up</LoadingButton>
+                          <LoadingButton loading={makeButtonLoading} variant='outlined' value={order._id} onClick={detailButtonHandler} sx={{ marginBottom: '.5em'}}> Detail</LoadingButton>
+                          <LoadingButton loading={makeButtonLoading} variant='contained' value={order._id} onClick={finishOrderHandler}>Picked Up</LoadingButton>
                         </Grid>
                       </Grid>
                     </Card>
@@ -487,9 +502,9 @@ const OrderStatus = (props) => {
                               </Grid>
                             </Grid>
                             <Grid item xs={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                              <LoadingButton variant='outlined' value={reservation._id} onClick={detailButtonHandlerRes} sx={{ marginBottom: '.75em'}} size='small'> Detail</LoadingButton>
-                              <LoadingButton variant='contained' value={reservation._id} onClick={confirmResHandler} size='small' sx={{ marginBottom: '.75em'}}>Confirm</LoadingButton>
-                              <LoadingButton variant='text' value={reservation._id} onClick={denyResHandler} size='small'>Deny Request</LoadingButton>
+                              <LoadingButton loading={makeButtonLoading} variant='outlined' value={reservation._id} onClick={detailButtonHandlerRes} sx={{ marginBottom: '.75em'}} size='small'> Detail</LoadingButton>
+                              <LoadingButton loading={makeButtonLoading} variant='contained' value={reservation._id} onClick={confirmResHandler} size='small' sx={{ marginBottom: '.75em'}}>Confirm</LoadingButton>
+                              <LoadingButton loading={makeButtonLoading} variant='text' value={reservation._id} onClick={denyResHandler} size='small'>Deny Request</LoadingButton>
                             </Grid>
                           </Grid>
                         </Card>
@@ -540,8 +555,8 @@ const OrderStatus = (props) => {
                               </Grid>
                             </Grid>
                             <Grid item xs={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                              <LoadingButton variant='outlined' value={reservation._id} onClick={detailButtonHandlerRes} sx={{ marginBottom: '.75em'}}> Detail</LoadingButton>
-                              <LoadingButton variant='contained' value={reservation._id} onClick={showupResHandler} sx={{ marginBottom: '.75em'}}>Showed Up</LoadingButton>
+                              <LoadingButton loading={makeButtonLoading} variant='outlined' value={reservation._id} onClick={detailButtonHandlerRes} sx={{ marginBottom: '.75em'}}> Detail</LoadingButton>
+                              <LoadingButton loading={makeButtonLoading} variant='contained' value={reservation._id} onClick={showupResHandler} sx={{ marginBottom: '.75em'}}>Showed Up</LoadingButton>
                             </Grid>
                           </Grid>
                         </Card>
