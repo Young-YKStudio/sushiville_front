@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import io from 'socket.io-client';
-
+import axios from 'axios';
 import OrderStatus from './OrderStatus';
 
 // MUI
 import { ThemeProvider } from '@mui/material/styles';
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import theme from '../../../theme/theme'
 
 const DashBoardSocket = (props) => {
@@ -13,20 +12,24 @@ const DashBoardSocket = (props) => {
   const [ socketOrders, setSocketOrders ] = useState(null);
   const [ socketReservations, setSocketReservations ] = useState(null);
 
-  const socket = io('http://sushiville-socket.herokuapp.com/', {withCredentials: true});
-  // const socket = io('http://localhost:4000/');
+  const callServer = async () => {
+    const config = {
+      header: {
+        "Content=Type": "application/json"
+      }
+    }
 
+    const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/order/list/socket`, config);
+
+    await setSocketOrders(data.listOrder);
+    await setSocketReservations(data.listReservation)
+  }
 
   useEffect(() => {
-    
-    socket.on('Orders', async (data) => {
-      await setSocketOrders(data)
-    })
-    socket.on('Reservations', async (data) => {
-      await setSocketReservations(data)
-    })
-
-    return () => socket.off()
+    const interval = setInterval(() => {
+      callServer();
+    }, 60000);
+    return () => clearInterval(interval);
   },[])
 
   useEffect(() => {
@@ -37,7 +40,7 @@ const DashBoardSocket = (props) => {
     <ThemeProvider theme={theme}>
       <Grid container>
         <Grid item xs={12}>
-          <OrderStatus socketOrders={socketOrders} socketReservations={socketReservations} />
+          <OrderStatus socketOrders={socketOrders} socketReservations={socketReservations} callServer={callServer} />
         </Grid>
       </Grid>
     </ThemeProvider>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { io } from 'socket.io-client';
 
 // Mui
 import { Grid, Typography, CircularProgress, Card, Button } from '@mui/material';
@@ -50,29 +49,38 @@ const OrderResult = (props) => {
           "Content-Type": "application/json"
         }
       }
+
       const request = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/order/${props.orderId}`, config)
+
       setOrderData(request.data.order)
       return request
     }
     fetchData()
   },[])
-  
-  useEffect(() => {
-    if (orderData) {
-      // TODO: update server url
-      const socket = io('http://sushiville-socket.herokuapp.com/', {withCredentials: true})
 
-      try {
-        socket.emit('newOrder', orderData[0])
-      } catch (err) {
-        console.log(err)
+  useEffect(() => {
+    if(!!orderData) {
+      const sendEmail = async () => {
+        const config = {
+          header: {
+            "Content-Type": "application/json"
+          },
+          user: {
+            "id": sessionStorage.userId
+          }
+        }
+
+        const email = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/order/admin/newOrder/${props.orderId}`, config)
+  
+        return email 
       }
+      sendEmail(); 
     }
   },[orderData])
 
   return (
     <ThemeProvider theme={theme}>
-      { !orderData ? 
+      { !orderData ?
       <Grid item xs={12}>
         <Grid container spacing={2} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Grid item xs={12} sx={{ marginTop: '2em'}}>
@@ -99,7 +107,7 @@ const OrderResult = (props) => {
                 <Grid item xs={6}>
                   <Typography variant='h6' sx={{color: '#dc5a41', textAlign: 'right', paddingRight: '1em'}}>{orderData[0].OrderNumber}</Typography>
                 </Grid>
-                { orderData[0].isPaidAtRestaurant == true ? 
+                { orderData[0].isPaidAtRestaurant === true ? 
                 <Grid item xs={12} sx={{ borderBottom: '1px solid #dc5a41', paddingBottom: '1em'}}>
                   <Typography variant='h6' sx={{ color: '#dc5a41', paddingTop: '.5em'}}>
                     Your order is not paid yet. <br />Please prepare to pay at pick up.
@@ -316,7 +324,7 @@ const OrderResult = (props) => {
               <Typography sx={{textAlign: 'right', paddingRight: '2em', color: 'darkgreen'}}>${(priceFomatter('tax').toFixed(2))}</Typography>
             </Grid>
             {/* Online process fee */}
-            {orderData[0].isPaidAtRestaurant == false ? 
+            {orderData[0].isPaidAtRestaurant === false ? 
             <>
               <Grid item xs={7}>
                 <Typography sx={{ color: 'gray', paddingLeft: '2em'}}>Online Processing Fee</Typography>

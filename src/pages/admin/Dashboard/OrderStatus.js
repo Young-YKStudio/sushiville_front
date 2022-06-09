@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { io } from 'socket.io-client';
 import moment from 'moment';
 // move io to dashboardPannel
 
@@ -13,6 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import theme from '../../../theme/theme';
 import DetailCard from './DetailCard';
 import ResDetailCard from './ResDetailCard';
+import axios from 'axios';
 
 const OrderStatus = (props) => {
   
@@ -29,8 +29,6 @@ const OrderStatus = (props) => {
   const [ modalResOpen, setModalResOpen ] = useState(false);
   const [ makeButtonLoading, setMakeButtonLoading ] = useState(false);
 
-  const socket = io('http://sushiville-socket.herokuapp.com/', {withCredentials: true})
-  // const socket = io('http://localhost:4000/')
   const audio = new Audio('/sound/ding.mp3')
   let interval
 
@@ -116,7 +114,6 @@ const OrderStatus = (props) => {
     } else {
       audio.pause();
       clearInterval(interval)
-
     }
     return () => {
       clearInterval(interval)
@@ -175,76 +172,199 @@ const OrderStatus = (props) => {
     setModalResOpen(true);
   }
 
-  const confirmOrderHandler = (e) => {
-    const connectingSocket = async () => {
-      try {
-        await socket.emit('confirmOrder', e.currentTarget.value)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    buttonLoading();
-    connectingSocket();
-  }
+  // ---------------------------------------- Reservations
   
   const confirmResHandler = (e) => {
+    setMakeButtonLoading(true);
     const connectingSocket = async () => {
+      const config = {
+        header: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      const request = {
+        body: {
+          isConfirmed: true,
+        }
+      };
+
       try {
-        await socket.emit('confirmReservation', e.currentTarget.value)
-      } catch (err) {
-        console.log(err)
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/reservation/admin/confirm/${e.currentTarget.value}`, request.body, config)
+
+        if (data.message === 'reservation confirmed') {
+          setMakeButtonLoading(false);
+          props.callServer();
+        } else {
+          setMakeButtonLoading(false);
+          console.log('error at updating reservation')
+        }
+      } catch (error) {
+        console.log(error)
       }
     }
-    buttonLoading();
     connectingSocket();
   }
   
   const denyResHandler = (e) => {
+    setMakeButtonLoading(true);
     const connectingSocket = async () => {
+      const config = {
+        header: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      const request = {
+        body: {
+          isDenied: true,
+        }
+      };
+
       try {
-        await socket.emit('deniedReservation', e.currentTarget.value)
-      } catch (err) {
-        console.log(err)
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/reservation/admin/deny/${e.currentTarget.value}`, request.body, config)
+
+        if (data.message === 'reservation denied') {
+          setMakeButtonLoading(false);
+          props.callServer();
+        } else {
+          setMakeButtonLoading(false);
+          console.log('error at updating reservation')
+        }
+      } catch (error) {
+        console.log(error)
       }
     }
-    buttonLoading();
     connectingSocket();
   }
 
   const showupResHandler = (e) => {
+    setMakeButtonLoading(true);
     const connectingSocket = async () => {
+      const config = {
+        header: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      const request = {
+        body: {
+          isShowedUp: true,
+        }
+      };
+
       try {
-        await socket.emit('showedupReservation', e.currentTarget.value)
-      } catch (err) {
-        console.log(err)
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/reservation/admin/finish/${e.currentTarget.value}`, request.body, config)
+
+        if (data.message === 'reservation finished') {
+          setMakeButtonLoading(false);
+          props.callServer();
+        } else {
+          setMakeButtonLoading(false);
+          console.log('error at updating reservation')
+        }
+      } catch (error) {
+        console.log(error)
       }
     }
-    buttonLoading();
+    connectingSocket();
+  }
+
+  // ------------------------------------------ Orders
+  
+  const confirmOrderHandler = (e) => {
+    setMakeButtonLoading(true);
+    const connectingSocket = async () => {
+      const config = {
+        header: {
+          "Content-Type": "application/json"
+        }
+      }
+
+      const request = {
+        body: {
+          isConfirmed: true,
+        }
+      }
+
+      try {
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/order/admin/confirm/${e.currentTarget.value}`, request.body, config)
+
+        if(data.message === 'order is confirmed') {
+          setMakeButtonLoading(false);
+          props.callServer();
+        } else {
+          setMakeButtonLoading(false);
+          console.log('error occured during updating')
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
     connectingSocket();
   }
 
   const readyOrderHandler = (e) => {
+    setMakeButtonLoading(true);
     const connectingSocket = async () => {
+      const config = {
+        header: {
+          "Content-Type": "application/json"
+        }
+      }
+
+      const request = {
+        body: {
+          isReady: true,
+        }
+      }
+
       try {
-        await socket.emit('readyToPickUp', e.currentTarget.value)
-      } catch (err) {
-        console.log(err)
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/order/admin/ready/${e.currentTarget.value}`, request.body, config)
+
+        if(data.message === 'order is now ready to be picked up') {
+          setMakeButtonLoading(false);
+          props.callServer();
+        } else {
+          setMakeButtonLoading(false);
+          console.log('error occured during updating')
+        }
+      } catch (error) {
+        console.log(error)
       }
     }
-
-    buttonLoading();
     connectingSocket();
   }
 
   const finishOrderHandler = (e) => {
+    setMakeButtonLoading(true);
     const connectingSocket = async () => {
+      const config = {
+        header: {
+          "Content-Type": "application/json"
+        }
+      }
+
+      const request = {
+        body: {
+          isFinished: true,
+        }
+      }
+
       try {
-        await socket.emit('finishOrder', e.currentTarget.value)
-      } catch (err) {
-        console.log(err)
+        const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/order/admin/finish/${e.currentTarget.value}`, request.body, config)
+
+        if(data.message === 'order finish success') {
+          setMakeButtonLoading(false);
+          props.callServer();
+        } else {
+          setMakeButtonLoading(false);
+          console.log('error occured during updating')
+        }
+      } catch (error) {
+        console.log(error)
       }
     }
-    buttonLoading();
     connectingSocket();
   }
 

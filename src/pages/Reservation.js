@@ -9,10 +9,8 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DateTimePicker from '@mui/lab/DateTimePicker';
 import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
 import theme from '../theme/theme';
-
-import { io } from 'socket.io-client';
-// TODO: update serverURL
-const socket = io('http://sushiville-socket.herokuapp.com/', {withCredentials: true})
+import axios from 'axios';
+import { LoadingButton } from '@mui/lab';
 
 const Reservation = (props) => {
   
@@ -28,7 +26,7 @@ const Reservation = (props) => {
   const [ isConfirmed, setIdConfirmed ] = useState(false);
   const [ modalOpen, setModalOpen ] = useState(false);
   const [ loading, setLoading ] = useState(false);
-  const [ ldata, setLdata ] = useState();
+  const [ buttonLoading, setButtonLoading ] = useState(false);
   const navigate = useNavigate();
 
 
@@ -54,7 +52,8 @@ const Reservation = (props) => {
   };
 
   const reservationHandler = async (e) => {
-    
+    setButtonLoading(true);
+
     const request = {
       "name": `${name}`,
       "customer": `${userId}`,
@@ -64,22 +63,22 @@ const Reservation = (props) => {
       "comments": `${comments}`,
       "reserveDate": `${reserveDate}`
     }
-    const sendRequest = async () => {
-      if (!!request) {
-        try {
-          await socket.emit('newReservation', request)
-          // modal on
-        } catch (err) {
-          console.log(err)
-        }
-      }
+
+    const config = {
+      "Content-Type": "application/json"
     }
 
-    const handleRequest = async () => {
-      await sendRequest();
-      await setModalOpen(true);
+    try {
+      const { data } = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/reservation/create`, request, config)
+
+      if (data.message === 'reservation made') {
+        setButtonLoading(false);
+        setModalOpen(true);
+      }
+    } catch (error) {
+      console.log(error)
     }
-    handleRequest();
+
   }
 
   // Handlers
@@ -197,7 +196,7 @@ const Reservation = (props) => {
                 autoComplete='on'
                 onChange={(e) => setComments(e.target.value)}
               />
-              <Button variant='contained' sx={{ marginTop: '2em'}} onClick={reservationHandler}>Confirm Reservation</Button>
+              <LoadingButton loading={buttonLoading} variant='contained' sx={{ marginTop: '2em'}} onClick={reservationHandler}>Confirm Reservation</LoadingButton>
             </form>
           </Paper>              
         </Grid>
