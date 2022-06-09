@@ -120,14 +120,11 @@ const OrderStatus = (props) => {
     }
   }, [socketNewOrders])
 
-  // handlers
+  useEffect(() => {
+    props.callServer();
+  },[])
 
-  const buttonLoading = () => {
-    setMakeButtonLoading(true);
-    setTimeout(() => {
-      setMakeButtonLoading(false);
-    }, 1500)
-  }
+  // handlers
 
   const musicPlay = () => {
     if (!!socketNewOrders.length >= 1) {
