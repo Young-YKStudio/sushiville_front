@@ -29,7 +29,7 @@ const OrderStatus = (props) => {
   const [ modalResOpen, setModalResOpen ] = useState(false);
   const [ makeButtonLoading, setMakeButtonLoading ] = useState(false);
 
-  const audio = new Audio('/sound/orderSound.mp3')
+  const audio = new Audio('/sound/TriangleDinnerBell.mp3')
   let interval
 
   // handlers
