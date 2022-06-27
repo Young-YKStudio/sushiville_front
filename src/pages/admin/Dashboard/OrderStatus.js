@@ -29,7 +29,8 @@ const OrderStatus = (props) => {
   const [ modalResOpen, setModalResOpen ] = useState(false);
   const [ makeButtonLoading, setMakeButtonLoading ] = useState(false);
 
-  const audio = new Audio('/sound/TriangleDinnerBell.mp3')
+  const audio = new Audio()
+  audio.autoplay = true;
   let interval
 
   // handlers
@@ -129,6 +130,7 @@ const OrderStatus = (props) => {
   const musicPlay = () => {
     if (!!socketNewOrders.length >= 1) {
       interval = setInterval(() => {
+        audio.src = '/sound/orderSound.mp3'
         audio.play()
       }, 5000)
     } else {
