@@ -11,6 +11,7 @@ import CheckCircleOutlineRounded from '@mui/icons-material/CheckCircleOutlineRou
 const OrderResult = (props) => {
   // states
   const [ orderData, setOrderData ] = useState();
+  const [ orderPlaced, setOrderPlaced ] = useState(false);
   const navigate = useNavigate();
 
   // handlers
@@ -74,6 +75,29 @@ const OrderResult = (props) => {
   
         return email 
       }
+
+      const isPlacedUpdater = async () => {
+        const config = {
+          header: {
+            "Content-Type": "application/json"
+          },
+        }
+        const request = {
+          body: {
+            isPlaced: true,
+          }
+        }
+
+        try {
+          const { data } = await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/order/${props.orderId}`, request.body, config)
+          if(!!data) {
+            console.log(data);
+          }
+        } catch (error) {
+          console.log(error)
+        }
+      }
+      isPlacedUpdater();
       sendEmail(); 
     }
   },[orderData])

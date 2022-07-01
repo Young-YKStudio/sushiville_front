@@ -20,9 +20,17 @@ const DashBoardSocket = (props) => {
     }
 
     const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/order/list/socket`, config);
+    console.log(data, 'from socket');
 
-    await setSocketOrders(data.listOrder);
-    await setSocketReservations(data.listReservation)
+    if(data.message === 'listing all orders') {
+      const filterOrder = (orders) => {
+        let filteredOrder = orders.filter(order => order.isPlaced == true)
+        setSocketOrders(filteredOrder);
+        console.log(filteredOrder, 'filtered Order')
+      }
+      filterOrder(data.listOrder);
+      setSocketReservations(data.listReservation);
+    }
   }
 
   useEffect(() => {

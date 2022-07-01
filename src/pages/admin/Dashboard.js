@@ -55,6 +55,7 @@ const DashBoard = (props) => {
   // states
   const [ value, setValue ] = useState(0);
   const [ allOrders, setAllOrders ] = useState([]);
+  const [ dataFetched, setDataFetched ] = useState(false);
 
   // handlers
   const handleChange = (event, newValue) => {
@@ -71,7 +72,10 @@ const DashBoard = (props) => {
       }
 
       const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/order/list/listorder`, config);
-      setAllOrders(data.listOrder);
+      if (data.message === 'listing all orders') {
+        setDataFetched(true);
+        setAllOrders(data.listOrder)
+      }
     }
     fetchOrders();
   },[])
@@ -95,7 +99,7 @@ const DashBoard = (props) => {
         </Box>
         <Grid item xs={12}>
           <TabPanel value={value} index={0}>
-            { allOrders.length > 0 ?
+            { !!dataFetched ?
               <DashBoardPannel 
                 allOrders={allOrders}
               />
