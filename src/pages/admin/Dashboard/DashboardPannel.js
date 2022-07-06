@@ -32,7 +32,7 @@ const DashBoardPannel = (props) => {
       </Grid>
       <Grid container>
         <Grid item xs={12}>
-          <Typography variant='h5' sx={{ fontFamily: 'Raleway', fontWeight: 'bold', color: 'darkgreen', paddingBottom: '.5em', borderBottom: '1px solid #dc5a41'}}>Settings</Typography>
+          <Typography variant='h5' sx={{ fontFamily: 'Raleway', fontWeight: 'bold', color: 'darkgreen', paddingBottom: '.5em', borderBottom: '1px solid #dc5a41', marginTop: '2em'}}>Settings</Typography>
         </Grid>
         <Grid item xs={12} md={8} sx={{ margin: '3em auto' }}>
           {/* store open/close */}
