@@ -83,7 +83,6 @@ const Header = (props) => {
               <>
                 <Link to='order'><Button className={classes.navItems}><SetMealIcon /></Button></Link>
                 <Link to='reservation'><Button className={classes.navItems}><EventAvailableIcon /></Button></Link>
-                <Button onClick={logoutHandler}>logout</Button>
                 {!props.authUser ? <Link to='login'><Button className={classes.navItems}><LoginIcon /></Button></Link>
                   :
                   null

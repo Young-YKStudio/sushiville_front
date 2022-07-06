@@ -68,6 +68,7 @@ const Cardform = (props) => {
 
   const testtestHandleForm = async (e) => {
     e.preventDefault();
+    setPaymentProcessing(true);
     let testCard = elements.getElement('card')
     let billingDetails = {
       name: cardName,
@@ -80,6 +81,7 @@ const Cardform = (props) => {
     }
 
     if (!stripe || !elements) {
+      setPaymentProcessing(false)
       return;
     }
     const result = await stripe.createPaymentMethod({
@@ -102,12 +104,14 @@ const Cardform = (props) => {
           })
 
           if (paymentMethodReq.statusText === "OK") {
+            setPaymentProcessing(false)
             props.handleComplete();
             props.handleNext();
           } else {
             addMessage('Please check the card')
           }
         } catch(error) {
+          setPaymentProcessing(false)
           console.log(error)
         }
       }
