@@ -79,7 +79,7 @@ const Cardform = (props) => {
         postal_code: postal,
       }
     }
-
+    
     if (!stripe || !elements) {
       setPaymentProcessing(false)
       return;
@@ -88,11 +88,12 @@ const Cardform = (props) => {
       type: 'card',
       card: testCard,
       billing_details: billingDetails,
-    })
+    }).then(console.log('createPaymentMethod went thru'), setPaymentProcessing(false))
 
     const paymentMethod = async (result) => {
       if(result.error) {
-        console.log(error)
+        addMessage(result.error.message)
+        setPaymentProcessing(false)
       } else {
         try {
           const paymentMethodReq = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/creditcard/charge`, {
@@ -129,10 +130,10 @@ const Cardform = (props) => {
     <ThemeProvider theme={theme}>
       <Grid item xs={12}>
         <Card sx={{ padding: '1em 1em'}}>
-          <form onSubmit={testtestHandleForm}>
+          <form>
             <Grid container>
               <Grid item xs={12}>
-                <Typography sx={{ textAlign: 'center', color: '#dc5a41', fontSize: '1.15em'}}>{messages}</Typography>
+                <Typography sx={{ textAlign: 'center', color: '#dc5a41', fontSize: '1.15em', marginBottom: '.5em'}}>{messages}</Typography>
                 <CardInformation 
                   line1={line1}
                   city={city}
@@ -162,7 +163,7 @@ const Cardform = (props) => {
               </Grid> 
               : null}
               <Grid item xs={12}> 
-                <LoadingButton disabled={paymentProcessing || !stripe} loading={paymentProcessing} variant="contained" type='submit' sx={{ width: '100%'}}>Pay ${(props.total).toFixed(2)}</LoadingButton>
+                <LoadingButton disabled={paymentProcessing || !stripe} loading={paymentProcessing} variant="contained" sx={{ width: '100%'}} onClick={testtestHandleForm}>Pay ${(props.total).toFixed(2)}</LoadingButton>
               </Grid>
             </Grid>
           </form>
