@@ -1764,6 +1764,82 @@ const Order = (props) => {
                     </Grid>
                   :  null
                 ))}
+                {/* SA sets */}
+                <Grid item xs={12} sx={{ marginBottom: '1em'}}>
+                  <Typography variant='h5' sx={{ fontFamily: 'Raleway', fontWeight: 'bold', color: 'darkgreen', paddingBottom: '.5em', borderBottom: '1px solid #dc5a41' }}>Sashimi Sets</Typography>
+                </Grid>
+                {products.menu.map((menu, i) => (
+                  menu.Sub_Category === 'Sashimi Sets' ?
+                    <Grid item xs={12} sm={6} md={4} key={i}>
+                      <Card sx={{ padding: '1em 1em'}}>
+                        <Grid container>
+                          <Grid item xs={12} sx={{ borderBottom: '1.5px solid darkgreen', marginBottom: '1em'}}>
+                            <Typography variant='h6' sx={{ fontFamily: 'Raleway', color: '#dc5a41' }}>{menu.name}&nbsp;&nbsp;<span className='order_card_caption'>{menu.caption}</span></Typography>
+                          </Grid>
+                          <Grid item xs={12} sx={{ marginBottom: '1.5em'}}>
+                            <Typography>{menu.description}</Typography>
+                          </Grid>
+                          <Grid item xs={4}>
+                            <Typography sx={{ color: 'darkgreen', fontStyle: 'italic', fontFamily: 'Raleway', fontSize: '1.25em'}}>${menu.price}</Typography>
+                          </Grid>
+                          <Grid item xs={8}>
+                          {props.isAutoOpen ? 
+                            <>
+                              {storeOpen ? 
+                                <Button 
+                                  variant='outlined' 
+                                  sx={{ width: '100%'}}
+                                  size='small'
+                                  value={menu._id}
+                                  onClick={modalOpener}
+                                >
+                                  <ShoppingCartIcon sx={{ fontSize: '1.3em'}} />&nbsp;Add to Cart
+                                </Button>
+                                : 
+                                <Button 
+                                  variant='outlined' 
+                                  sx={{ width: '100%'}}
+                                  size='small'
+                                  value={menu._id}
+                                  onClick={modalOpener}
+                                  disabled
+                                >
+                                  Restaurant closed
+                                </Button>
+                              }
+                            </> 
+                            : 
+                            <>
+                              {props.manualOpen ?
+                                <Button 
+                                variant='outlined' 
+                                sx={{ width: '100%'}}
+                                size='small'
+                                value={menu._id}
+                                onClick={modalOpener}
+                                >
+                                  <ShoppingCartIcon sx={{ fontSize: '1.3em'}} />&nbsp;Add to Cart
+                                </Button>
+                                :
+                                <Button 
+                                variant='outlined' 
+                                sx={{ width: '100%'}}
+                                size='small'
+                                value={menu._id}
+                                onClick={modalOpener}
+                                disabled
+                                >
+                                  Restaurant closed
+                                </Button>
+                              }
+                            </>
+                            }
+                          </Grid>
+                        </Grid>
+                      </Card>
+                    </Grid>
+                  :  null
+                ))}
                 {/* SU SA sets */}
                 <Grid item xs={12} sx={{ marginBottom: '1em', marginTop: '1.5em'}}>
                   <Typography variant='h5' sx={{ fontFamily: 'Raleway', fontWeight: 'bold', color: 'darkgreen', paddingBottom: '.5em', borderBottom: '1px solid #dc5a41' }}>Sushi & Sashimi Sets</Typography>

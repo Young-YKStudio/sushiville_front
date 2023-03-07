@@ -11,6 +11,19 @@ const SushiSashimi = (props) => {
         )
       }
     })
+
+    const sashimiSetItems =
+    props.fetchedData.map((card, i) => {
+      if (card.Sub_Category === 'Sashimi Sets') {
+        return (
+          <div key={i} className='menuCard'>
+            <h3 className='menuCard_name'>{card.name}<span className='menuCard_tags'><br />{card.caption}</span></h3>
+            <p className='menuCard_description'>{card.description}</p>
+            <p className='menuCard_price'>${card.price}</p>
+          </div>
+        )
+      }
+    })
   
   const sushiSashimiSetItems =
     props.fetchedData.map((card, i) => {
@@ -42,6 +55,8 @@ const SushiSashimi = (props) => {
       <h1 className='menuCardTitle1'>Sushi & Sashimi</h1>
       <h2 className='menuCardTitle2'>Sushi Sets</h2>
       {sushiSetItems}
+      <h2 className='menuCardTitle2'>Sashimi Sets</h2>
+      {sashimiSetItems}
       <h2 className='menuCardTitle2'>Sushi & Sashimi Sets</h2>
       {sushiSashimiSetItems}
       <h2 className='menuCardTitle2'>Special Seared Sushi</h2>
